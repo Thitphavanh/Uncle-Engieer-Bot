@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Notification to Discord</title>
+</head>
+<body>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+  
+    <label for="phone_number">Phone Number:</label>
+    <input type="text" name="phone_number" id="phone_number"><br>
+  
+    <label for="message">Message:</label>
+    <textarea name="message" id="message"></textarea><br>
+  
+    <label for="image">Image:</label>
+    <input type="file" name="image" id="image"><br>
+  
+    <label for="purchasing_cost">Purchasing Cost:</label>
+    <input type="number" name="purchasing_cost" id="purchasing_cost"><br>
+  
+    <label for="express">Express:</label>
+    <input type="text" name="express" id="express"><br>
+  
+    <label for="express_price">Express Price:</label>
+    <input type="number" name="express_price" id="express_price"><br>
+  
+    <label for="order_id">Order ID:</label>
+    <input type="text" name="order_id" id="order_id"><br>
+  
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>
